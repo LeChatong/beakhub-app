@@ -1,0 +1,55 @@
+<ion-content [fullscreen]="true" class="auth-page">
+  <ion-grid>
+    <ion-row>
+      <ion-text class="logo-text">BeakHub</ion-text>
+      <ion-text class="sub-text">Let's join us and Build your relationship with others</ion-text>
+      <ion-col class="ion-text-center" size-md="6" size-lg="5" size-xs="12">
+        <form [formGroup]="login" (ngSubmit)="onLogin()">
+
+          <ion-item class="input" color="white">
+            <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+          </ion-item>
+          <span style="margin-bottom: 15px;" class="ion-margin"></span>
+          <ion-item color="white" class="ion-no-inner-padding-end input">
+              <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+              <ion-button
+                slot="end"
+                fill="clear"
+                class="ion-no-margin"
+                [routerLink]="[ '/auth', 'forgot' ]"
+                routerDirection="forward"
+              >
+                <ion-icon slot="icon-only" color="medium" name="help-circle-outline"></ion-icon>
+              </ion-button>
+            </ion-item>
+          <span style="margin-bottom: 15px;" class="ion-margin"></span>
+          <ion-button
+            expand="block"
+            class="ion-margin-start ion-margin-end ion-margin-bottom btn btn-sign-in"
+            type="submit"
+            [disabled]="!login.valid">
+            SIGN IN
+          </ion-button>
+
+          <ion-button
+            expand="block"
+            class="ion-margin btn btn-sign-up-google"
+            [routerLink]="[ '/auth', 'register' ]"
+            routerDirection="forward">
+            SIGN UP WITH GOOGLE
+          </ion-button>
+
+          <ion-button
+            expand="block"
+            class="ion-margin btn btn-sign-up-facebook" [routerLink]="[ '/auth', 'pin' ]"
+            routerDirection="forward">
+            SIGN UP WITH FACEBOOK
+          </ion-button>
+        </form>
+        <div class="logo">
+            <img src="./assets/logo/BH_SOLO.png" width="100px" />
+          </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

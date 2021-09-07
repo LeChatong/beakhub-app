@@ -1,0 +1,33 @@
+.logo-text{
+  font-size: 50px;
+  margin-left: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #600769;
+}
+.sub-text{
+  color: #600769;
+  font-size: 17px;
+  margin-left: 25px;
+  margin-bottom: 50px;
+}
+.input{
+  color: #600769;
+  padding: 15px;
+  --border-radius: 10px;
+  --border-width: 1px;
+  --border-color: #600769;
+}
+.btn{
+  --border-radius: 10px;
+  --color: #FFFFFF;
+}
+.btn-sign-in{
+  --background: #D11F4B;
+}
+.btn-sign-up-google{
+  --background: #FEC13B;
+}
+.btn-sign-up-facebook{
+  --background: #2279E8;
+}
